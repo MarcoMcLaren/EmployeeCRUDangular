@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+ /*display navigation text in navbar as white*/
+    .navbar-nav .nav-link {
+        color: #fff !important;
+    }
+    /*change the color of the active link*/
+    .nav-item.active .nav-link {
+        color: #f97924 !important;
+    }
+

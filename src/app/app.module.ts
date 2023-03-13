@@ -5,17 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { EmployeeListComponent } from './Components/Employees/employee-list/employee-list.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { RouterModule } from '@angular/router';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', component: EmployeeListComponent },
+      { path: 'employees', component: EmployeeListComponent },
+      { path: 'add', component: AddEmployeeComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

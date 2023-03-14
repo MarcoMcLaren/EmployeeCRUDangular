@@ -11,11 +11,14 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    EditEmployeeComponent
   ],
   imports: [
     BrowserModule,

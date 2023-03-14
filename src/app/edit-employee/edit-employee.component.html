@@ -1,0 +1,50 @@
+
+<div class="container">
+    
+    <div class="row">
+        
+        <div class="col-md-6">
+            <h2>Edit Employee</h2>
+            <div class="container my-5">
+
+                <form>
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Name: </label>
+                      <input type="text" class="form-control" id="name" 
+                      name="name" [(ngModel)] = "employeeDetails.name">
+                    </div>
+                   
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email: </label>
+                        <input type="email" class="form-control" id="email" 
+                        name="email" [(ngModel)] = "employeeDetails.email">
+                      </div>
+            
+                      <div class="mb-3">
+                        <label for="phone" class="form-label">Phone: </label>
+                        <input type="number" class="form-control" id="phone" 
+                        name="phone" [(ngModel)] = "employeeDetails.phone">
+                      </div>
+            
+                      <div class="mb-3">
+                        <label for="salary" class="form-label">Salary: </label>
+                        <input type="number" class="form-control" id="salary" 
+                        name="salary" [(ngModel)] = "employeeDetails.salary">
+                      </div>
+            
+                      <div class="mb-3">
+                        <label for="Department" class="form-label">Department: </label>
+                        <input type="text" class="form-control" id="department"
+                         name="department" [(ngModel)] = "employeeDetails.department">
+                      </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+

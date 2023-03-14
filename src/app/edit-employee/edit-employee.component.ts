@@ -18,6 +18,7 @@ export class EditEmployeeComponent implements OnInit{
     salary: 0,
     department: ''
   }
+  router: any;
 
   constructor(private route: ActivatedRoute, private employeeService: EmployeesService) { }
 
@@ -35,5 +36,29 @@ export class EditEmployeeComponent implements OnInit{
           }
         }
     )
+  }
+
+  updateEmployee(){
+    this.employeeService.updateEmployee(this.employeeDetails.id).subscribe({
+      next: (response) => {
+        this.employeeDetails = response;
+      }
+    })
+  }
+
+  officialUpdate(){
+    this.employeeService.officialUpdate(this.employeeDetails.id, this.employeeDetails).subscribe({
+      next: (response) => {
+        this.employeeDetails = response;
+      }
+    })
+  }
+
+  deleteEmployee(id: string){
+    this.employeeService.deleteEmployee(this.employeeDetails.id).subscribe({
+      next: (response) => {
+       this.router.navigate(['/employees']);
+      }
+    })
   }
 }

@@ -7,7 +7,7 @@
             <h2>Edit Employee</h2>
             <div class="container my-5">
 
-                <form>
+                <form #form="ngForm" (ngSubmit)="updateEmployee()"> <!--The update isn't working in Angular-->
                     <div class="mb-3">
                       <label for="name" class="form-label">Name: </label>
                       <input type="text" class="form-control" id="name" 
@@ -37,7 +37,8 @@
                         <input type="text" class="form-control" id="department"
                          name="department" [(ngModel)] = "employeeDetails.department">
                       </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" (click)="officialUpdate()">Update</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteEmployee(employeeDetails.id)">Delete</button>
                   </form>
             
             </div>

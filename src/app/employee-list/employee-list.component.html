@@ -19,8 +19,8 @@
           <td>{{employee.phone}}</td>
           <td>{{employee.salary}}</td>
           <td>{{employee.department}}</td>
-          <td><button type="button" class="btn btn-success">
-            <a [routerLink]="['/employees', 'edit', employee.id]" class="text-white" style="text-decoration:none;">Edit</a>
+          <td><button type="submit" class="btn btn-primary">
+            <a [routerLink]="['/employees', 'edit', employee.id]" class="text-white" style="text-decoration:none;">View</a>
           </button></td>
         </tr>
       </tbody>
